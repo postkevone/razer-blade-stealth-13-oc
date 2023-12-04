@@ -12,3 +12,17 @@
 |NVMe|SOLIDIGM P44 PRO 1TB|
 |Display|13.3" FHD 120Hz|
 |Wifi|Intel AX201|
+
+### BIOS
+
+|Firmware|Version|
+|---|---|
+|System BIOS|1.04|
+|EC FW|1.01|
+|MCU FW|1.00.00.00|
+
+- `Advanced` > `Thunderbolt(TM) Configuration` > `Security Level`: No Security
+- `Chipset` > `SATA And RST Configuration` > `SATA Mode Selection`: AHCI
+- `Security` > `Secure Boot` > `Secure Boot`: Disabled
+- `Boot` > `Fast Boot`: Disabled
+- `Boot` > `CSM Configuration` > `CSM Support`: Disabled
