@@ -21,41 +21,8 @@
 DefinitionBlock ("", "SSDT", 2, "DRTNIA", "TPAD", 0x00000000)
 {
     External (_SB_.PCI0.I2C0.TPD0, DeviceObj)
-    External (_SB_.PCI0.I2C1.TPD0, DeviceObj)
-    External (_SB_.PCI0.I2C2.TPD0, DeviceObj)
-    External (_SB_.PCI0.I2C3.TPD0, DeviceObj)
 
     Scope (_SB.PCI0.I2C0.TPD0)
-    {
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-            If (_OSI ("Darwin"))
-            {
-                Return (Zero)
-            }
-            Else
-            {
-                Return (One)
-            }
-        }
-    }
-
-    Scope (_SB.PCI0.I2C2.TPD0)
-    {
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-            If (_OSI ("Darwin"))
-            {
-                Return (Zero)
-            }
-            Else
-            {
-                Return (One)
-            }
-        }
-    }
-
-    Scope (_SB.PCI0.I2C3.TPD0)
     {
         Method (_STA, 0, NotSerialized)  // _STA: Status
         {
