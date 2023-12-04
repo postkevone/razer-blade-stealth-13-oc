@@ -15,7 +15,7 @@
 
 <details>  
 <summary>BIOS</summary>
-
+<br>
 |Firmware|Version|
 |---|---|
 |System BIOS|1.04|
