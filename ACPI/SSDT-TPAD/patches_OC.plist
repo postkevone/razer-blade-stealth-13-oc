@@ -8,11 +8,11 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Embedded controller fix - Needs EC _STA to XSTA renames</string>
+				<string>_STA method for TPD0</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
+				<string>SSDT-TPAD.aml</string>
 			</dict>
 		</array>
 		<key>Patch</key>
@@ -23,14 +23,14 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>EC0 _STA to XSTA Rename (SSDT-EC-USBX)</string>
+				<string>TPD0 _STA to XSTA Rename  (SSDT-TPAD)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				YBQJX1NUQQ==
+				FBxfU1RBAA==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -39,11 +39,10 @@
 				</data>
 				<key>OemTableId</key>
 				<data>
-				AAAAAA==
 				</data>
 				<key>Replace</key>
 				<data>
-				YBQJWFNUQQ==
+				FBxYU1RBAA==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -54,7 +53,6 @@
 				<integer>0</integer>
 				<key>TableSignature</key>
 				<data>
-				AAAAAA==
 				</data>
 			</dict>
 		</array>

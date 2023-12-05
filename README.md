@@ -50,7 +50,7 @@
 - `SSDT-PLUG`: Allow the kernel's XCPM(XNU's CPU Power Management) to manage our CPU's power management.
 - `SSDT-PNLF`: Create a PNLF device with a hardware ID of APP0002 to fix backlight.
 - `SSDT-RHUB`: Turn off the RHUB device and force macOS to manually rebuild the USB ports.
-- `SSDT-TPAD`: Enable I2C trackpad.
+- `SSDT-TPAD`: Enable I2C touchpad by returning zero in the _STA method of TPD0.
 - `SSDT-XOSI`: Enable I2C devices such as trackpads.
 
 </details>
