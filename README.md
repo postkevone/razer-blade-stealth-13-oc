@@ -13,6 +13,17 @@
 |Display|13.3" FHD 120Hz|
 |Wifi|Intel AX201|
 
+## What does not work
+
+- [Limitation of AirportItlwm.kext](https://openintelwireless.github.io/itlwm/FAQ.html#limitation-of-airportitlwm-kext)
+- Discrete GPU (disabled)
+- Internal microphone
+
+## Not tested
+
+- Thunderbolt 3
+- External display
+
 <details>  
 <summary>BIOS</summary>
 <br>
