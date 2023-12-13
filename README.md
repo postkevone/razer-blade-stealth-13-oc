@@ -26,9 +26,7 @@
 - Thunderbolt 3
 - External display
 
-<details>  
-<summary>Framebuffer Test</summary>
-<br>
+## Framebuffer Test
 
 |Framebuffer|Connectors|Notes|
 |---|---|---
@@ -56,7 +54,7 @@
 |`0200528A`|`5`|Black screen after boot,|
 |`0200538A`|`5`|Black screen after boot.|
 
-</details>
+## Cofiguration
 
 <details>  
 <summary>BIOS</summary>
@@ -147,7 +145,7 @@
 
 ## SMBIOS
 
-`MacBookAir9,1`: Has the nearest CPU clock frequencies to the Razer Blade 13 RZ09-03102..
+`MacBookAir9,1`: Has the nearest CPU clock frequencies to the Razer Blade 13 RZ09-03102.
 
 ## Credits
 
