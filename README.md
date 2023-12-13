@@ -19,7 +19,7 @@
 - Discrete GPU (disabled)
 - Internal microphone
 - Sleep.
-    - Sleep works but the dGPU is turned on after sleep. Disable sleep completely for battery durability: `sudo pmset disablesleep 1`.
+    - Sleep works but the dGPU is turned on after sleep. Disable sleep completely for longer battery life: `sudo pmset disablesleep 1`.
 
 ## Not tested
 
@@ -62,7 +62,7 @@
 - `SSDT-EC-USBX`: Create a simple "fake" EC device and fix USB power.
 - `SSDT-HPET`: Fix IRQ conflicts.
 - `SSDT-I2C`: [Methods for I2C touchpad](https://github.com/jman985/Razer-Blade-Stealth-13--Early-2020--Hackintosh).
-- `SSDT-PLUG`: Allow the kernel's XCPM(XNU's CPU Power Management) to manage our CPU's power management.
+- `SSDT-PLUG`: Allow the kernel's XCPM(XNU's CPU Power Management) to manage CPU's power management.
 - `SSDT-PNLF`: Create a PNLF device with a hardware ID of APP0002 to fix backlight.
 - `SSDT-RHUB`: Turn off the RHUB device and force macOS to manually rebuild the USB ports.
 - `SSDT-SBUS-MCHC`: [Fix SMBus support](https://github.com/jman985/Razer-Blade-Stealth-13--Early-2020--Hackintosh).
@@ -101,4 +101,31 @@
 |0200528A|5|Black screen after boot,|
 |0200538A|5|Black screen after boot.|
 
-</details> 
+</details>
+
+<details>  
+<summary>Device Properties</summary>
+<br>
+
+|Path|Setting|Value|Note|
+|---|---|---|---|
+|PciRoot(0x0)/Pci(0x2,0x0)|AAPL,GfxYTile|01000000|Fix glitches.|
+||AAPL,ig-platform-id|01005C8A|Recommended value.|
+||device-id|5C8A0010|Recommended value.|
+||enable-backlight-registers-fix|1|Fix backlight registers on KBL, CFL and ICL platforms.|
+||enable-backlight-smoother|1|Make brightness transitions smoother.|
+||enable-cdclk-frequency-fix|1|Support all valid Core Display Clock (CDCLK) frequencies on ICL platforms.|
+||enable-dbuf-early-optimizer|1|Fix the Display Data Buffer (DBUF) issues on ICL+ platforms.|
+||enable-dvmt-calc-fix|1|Fix the kernel panic caused by an incorrectly calculated amount of DVMT pre-allocated memory on Intel ICL platforms.|
+||framebuffer-patch-enable|1|In some cases where you cannot set the DVMT-prealloc of these cards to 256MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties.|
+||framebuffer-fbmem|00009000|Same as above.|
+||framebuffer-stolenmem|00003001|Same as above.|
+|PciRoot(0x0)/Pci(0x1f,0x3)|layout-id|10000000|Layout for AppleALC.|
+
+</details>
+
+<details>  
+<summary>Kexts</summary>
+<br>
+
+</details>
