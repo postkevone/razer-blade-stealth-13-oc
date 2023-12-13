@@ -147,7 +147,7 @@
 
 ## SMBIOS
 
-`MacBookAir9,1`; Has the nearest CPU clock frequencies to the Razer Blade 13 RZ09-03102.
+`MacBookAir9,1`: Has the nearest CPU clock frequencies to the Razer Blade 13 RZ09-03102..
 
 ## Credits
 
