@@ -1,5 +1,5 @@
 # Razer Blade Stealth 13 (2020) RZ09-03102
-![Static Badge](https://img.shields.io/badge/0.9.6-blue?label=OpenCore)
+![Static Badge](https://img.shields.io/badge/0.9.7-blue?label=OpenCore)
 ![Static Badge](https://img.shields.io/badge/Monterey-blueviolet?label=MacOS)
 
 ### Specifications
@@ -25,6 +25,38 @@
 
 - Thunderbolt 3
 - External display
+
+<details>  
+<summary>Framebuffer Test</summary>
+<br>
+
+|Framebuffer|Connectors|Notes|
+|---|---|---
+|`000005FF`|`3`|Panic after sleep.|
+|`0000718A`|`6`|Black screen after sleep.|
+|`0000708A`|`6`|Boot error.|
+|`0000518A`|`6`|Black screen after sleep.|
+|`00005C8A`|`6`|Black screen after sleep.|
+|`00005D8A`|`6`|Black screen after sleep.|
+|`0000528A`|`6`|Black screen after sleep (Dortania).|
+|`0000538A`|`6`|Black screen after sleep.|
+|`00005A8A`|`6`|Black screen after sleep.|
+|`00005B8A`|`6`|Black screen after sleep.|
+|`0100718A`|`5`|Sleep working (need to open lid twice).|
+|`0100A780`|`5`|Boot error.|
+|`0100518A`|`3`|Sleep working (need to open lid twice).|
+|`01005C8A`|`3`|Sleep working (need to open lid twice).<br>(Recommended)|
+|`01005D8A`|`3`|Sleep working (need to open lid twice).|
+|`0100528A`|`5`|Black screen after boot.|
+|`0100538A`|`5`|Black screen after boot.|
+|`01005A8A`|`5`|Black screen after boot.|
+|`01005B8A`|`5`|Black screen after boot.|
+|`0200518A`|`3`|Cursor glitch, panic after sleep.|
+|`02005C8A`|`3`|Cursor glitch, sleep working (need to open lid twice).|
+|`0200528A`|`5`|Black screen after boot,|
+|`0200538A`|`5`|Black screen after boot.|
+
+</details>
 
 <details>  
 <summary>BIOS</summary>
@@ -72,38 +104,6 @@
 </details>
 
 <details>  
-<summary>Framebuffer Test</summary>
-<br>
-
-|Framebuffer|Connectors|Notes|
-|---|---|---
-|`000005FF`|`3`|Panic after sleep.|
-|`0000718A`|`6`|Black screen after sleep.|
-|`0000708A`|`6`|Boot error.|
-|`0000518A`|`6`|Black screen after sleep.|
-|`00005C8A`|`6`|Black screen after sleep.|
-|`00005D8A`|`6`|Black screen after sleep.|
-|`0000528A`|`6`|Black screen after sleep (Dortania).|
-|`0000538A`|`6`|Black screen after sleep.|
-|`00005A8A`|`6`|Black screen after sleep.|
-|`00005B8A`|`6`|Black screen after sleep.|
-|`0100718A`|`5`|Sleep working (need to open lid twice).|
-|`0100A780`|`5`|Boot error.|
-|`0100518A`|`3`|Sleep working (need to open lid twice).|
-|`01005C8A`|`3`|Sleep working (need to open lid twice).<br>(Recommended)|
-|`01005D8A`|`3`|Sleep working (need to open lid twice).|
-|`0100528A`|`5`|Black screen after boot.|
-|`0100538A`|`5`|Black screen after boot.|
-|`01005A8A`|`5`|Black screen after boot.|
-|`01005B8A`|`5`|Black screen after boot.|
-|`0200518A`|`3`|Cursor glitch, panic after sleep.|
-|`02005C8A`|`3`|Cursor glitch, sleep working (need to open lid twice).|
-|`0200528A`|`5`|Black screen after boot,|
-|`0200538A`|`5`|Black screen after boot.|
-
-</details>
-
-<details>  
 <summary>Device Properties</summary>
 <br>
 
@@ -140,3 +140,11 @@
 |`IntelBluetoothFirmware`<br>`IntelBTPatcher`<br>`BlueToolFixup`|Bluetooth.|
 
 </details>
+
+## Boot args
+
+`-noDC9`: Fix sleep panic.
+
+## SMBIOS
+
+`MacBookAir9,1`; Has the nearest CPU clock frequencies to the Razer Blade 13 RZ09-03102.
