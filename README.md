@@ -28,6 +28,10 @@
 
 ## Framebuffer Test
 
+<details>  
+<summary>List</summary>
+<br>
+
 |Framebuffer|Connectors|Notes|
 |---|---|---
 |`000005FF`|`3`|Panic after sleep.|
@@ -53,6 +57,8 @@
 |`02005C8A`|`3`|Cursor glitch, sleep working (need to open lid twice).|
 |`0200528A`|`5`|Black screen after boot,|
 |`0200538A`|`5`|Black screen after boot.|
+
+</details> 
 
 ## Cofiguration
 
