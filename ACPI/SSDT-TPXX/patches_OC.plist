@@ -8,11 +8,11 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>_STA method for TPD0</string>
+				<string>Touchpad _STA methods</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-TPAD.aml</string>
+				<string>SSDT-TPXX.aml</string>
 			</dict>
 		</array>
 		<key>Patch</key>
@@ -23,7 +23,7 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>TPD0 _STA to XSTA Rename  (SSDT-TPAD)</string>
+				<string>_STA to XSTA TPD0 (SSDT-TPXX)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
