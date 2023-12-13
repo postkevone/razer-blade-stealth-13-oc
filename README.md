@@ -18,6 +18,8 @@
 - [Limitation of AirportItlwm.kext](https://openintelwireless.github.io/itlwm/FAQ.html#limitation-of-airportitlwm-kext)
 - Discrete GPU (disabled)
 - Internal microphone
+- Sleep.
+    - Sleep works but the dGPU is turned on after sleep. Disable sleep completely for battery durability: `sudo pmset disablesleep 1`.
 
 ## Not tested
 
@@ -68,3 +70,35 @@
 - `SSDT-XOSI`: Enable I2C devices such as trackpads.
 
 </details>
+
+<details>  
+<summary>Framebuffer Test</summary>
+<br>
+
+|Framebuffer|Connectors|Notes|
+|---|---|---
+|000005FF|3|Panic after sleep.|
+|0000718A|6|Black screen after sleep.|
+|0000708A|6|Boot error.|
+|0000518A|6|Black screen after sleep.|
+|00005C8A|6|Black screen after sleep.|
+|00005D8A|6|Black screen after sleep.|
+|0000528A|6|Black screen after sleep (Dortania).|
+|0000538A|6|Black screen after sleep.|
+|00005A8A|6|Black screen after sleep.|
+|00005B8A|6|Black screen after sleep.|
+|0100718A|5|Sleep working (need to open lid twice).|
+|0100A780|5|Boot error.|
+|0100518A|3|Sleep working (need to open lid twice).|
+|01005C8A|3|Sleep working (need to open lid twice).<br>(Recommended)|
+|01005D8A|3|Sleep working (need to open lid twice).|
+|0100528A|5|Black screen after boot.|
+|0100538A|5|Black screen after boot.|
+|01005A8A|5|Black screen after boot.|
+|01005B8A|5|Black screen after boot.|
+|0200518A|3|Cursor glitch, panic after sleep.|
+|02005C8A|3|Cursor glitch, sleep working (need to open lid twice).|
+|0200528A|5|Black screen after boot,|
+|0200538A|5|Black screen after boot.|
+
+</details> 
