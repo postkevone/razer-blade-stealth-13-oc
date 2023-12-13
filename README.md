@@ -130,14 +130,14 @@
 
 |Name|Notes|
 |---|---|
-|`Lilu`<br>`WhateverGreen`<br>`VirtualSMC`<br>`SMCBatteryManager`<br>`SMCProcessor`<br>`SMCSuperIO`|Essentials.|
-|`AppleALC`|Audio.|
-|`ECEnabler`|Battery reading.|
+|`Lilu`<br>`WhateverGreen`<br>`VirtualSMC`<br>`SMCBatteryManager`<br>`SMCProcessor`<br>`SMCSuperIO`|Essentials|
+|`AppleALC`|Audio|
+|`ECEnabler`|Battery reading|
 |`NVMeFix`|Improve compatibility with NVMe SSD.|
-|`USBToolBox`<br>`UTBMap.`|USB mapping.|
-|`VoodooI2C`<br>`VoodooI2CHID`|Touchpad.|
-|`AirportItlwm`|Wifi.|
-|`IntelBluetoothFirmware`<br>`IntelBTPatcher`<br>`BlueToolFixup`|Bluetooth.|
+|`USBToolBox`<br>`UTBMap.`|USB mapping|
+|`VoodooI2C`<br>`VoodooI2CHID`|Touchpad|
+|`AirportItlwm`|Wifi|
+|`IntelBluetoothFirmware`<br>`IntelBTPatcher`<br>`BlueToolFixup`|Bluetooth|
 
 </details>
 
@@ -148,3 +148,13 @@
 ## SMBIOS
 
 `MacBookAir9,1`; Has the nearest CPU clock frequencies to the Razer Blade 13 RZ09-03102.
+
+## Credits
+
+[Dortania](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#starting-point)
+
+[jman985](https://github.com/jman985/Razer-Blade-Stealth-13--Early-2020--Hackintosh)
+
+[KatLantyss](https://github.com/KatLantyss/Razer-Blade-Stealth-13-IceLake-Hackintosh)
+
+[stonevil](https://github.com/stonevil/Razer_Blade_Advanced_early_2019_Hackintosh)
