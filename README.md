@@ -34,29 +34,29 @@
 
 |Framebuffer|Connectors|Notes|
 |---|---|---
-|`000005FF`|`3`|Panic after sleep.|
-|`0000718A`|`6`|Black screen after sleep.|
-|`0000708A`|`6`|Boot error.|
-|`0000518A`|`6`|Black screen after sleep.|
-|`00005C8A`|`6`|Black screen after sleep.|
-|`00005D8A`|`6`|Black screen after sleep.|
-|`0000528A`|`6`|Black screen after sleep (Dortania).|
-|`0000538A`|`6`|Black screen after sleep.|
-|`00005A8A`|`6`|Black screen after sleep.|
-|`00005B8A`|`6`|Black screen after sleep.|
-|`0100718A`|`5`|Sleep working (need to open lid twice).|
-|`0100A780`|`5`|Boot error.|
-|`0100518A`|`3`|Sleep working (need to open lid twice).|
-|`01005C8A`|`3`|Sleep working (need to open lid twice).<br>(Recommended)|
-|`01005D8A`|`3`|Sleep working (need to open lid twice).|
-|`0100528A`|`5`|Black screen after boot.|
-|`0100538A`|`5`|Black screen after boot.|
-|`01005A8A`|`5`|Black screen after boot.|
-|`01005B8A`|`5`|Black screen after boot.|
-|`0200518A`|`3`|Cursor glitch, panic after sleep.|
-|`02005C8A`|`3`|Cursor glitch, sleep working (need to open lid twice).|
-|`0200528A`|`5`|Black screen after boot,|
-|`0200538A`|`5`|Black screen after boot.|
+|000005FF|3|Panic after sleep.|
+|0000718A|6|Black screen after sleep.|
+|0000708A|6|Boot error.|
+|0000518A|6|Black screen after sleep.|
+|00005C8A|6|Black screen after sleep.|
+|00005D8A|6|Black screen after sleep.|
+|0000528A|6|Black screen after sleep (Dortania).|
+|0000538A|6|Black screen after sleep.|
+|00005A8A|6|Black screen after sleep.|
+|00005B8A|6|Black screen after sleep.|
+|0100718A|5|Sleep working (need to open lid twice).|
+|0100A780|5|Boot error.|
+|0100518A|3|Sleep working (need to open lid twice).|
+|01005C8A|3|Sleep working (need to open lid twice).<br>(Recommended)|
+|01005D8A|3|Sleep working (need to open lid twice).|
+|0100528A|5|Black screen after boot.|
+|0100538A|5|Black screen after boot.|
+|01005A8A|5|Black screen after boot.|
+|01005B8A|5|Black screen after boot.|
+|0200518A|3|Cursor glitch, panic after sleep.|
+|02005C8A|3|Cursor glitch, sleep working (need to open lid twice).|
+|0200528A|5|Black screen after boot,|
+|0200538A|5|Black screen after boot.|
 
 </details> 
 
@@ -113,18 +113,18 @@
 
 |Path|Setting|Value|Notes|
 |---|---|---|---|
-|`PciRoot(0x0)/Pci(0x2,0x0)`|`AAPL,GfxYTile`|`01000000`|Fix glitches.|
-||`AAPL,ig-platform-id`|`01005C8A`|Recommended value.|
-||`device-id`|`5C8A0010`|Recommended value.|
-||`enable-backlight-registers-fix`|`1`|Fix backlight registers on KBL, CFL and ICL platforms.|
-||`enable-backlight-smoother`|`1`|Make brightness transitions smoother.|
-||`enable-cdclk-frequency-fix`|`1`|Support all valid Core Display Clock (CDCLK) frequencies on ICL platforms.|
-||`enable-dbuf-early-optimizer`|`1`|Fix the Display Data Buffer (DBUF) issues on ICL+ platforms.|
-||`enable-dvmt-calc-fix`|`1`|Fix the kernel panic caused by an incorrectly calculated amount of DVMT pre-allocated memory on Intel ICL platforms.|
-||`framebuffer-patch-enable`|`1`|In some cases where you cannot set the DVMT-prealloc of these cards to 256MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties.|
-||`framebuffer-fbmem`|`00009000`|Same as above.|
-||`framebuffer-stolenmem`|`00003001`|Same as above.|
-|`PciRoot(0x0)/Pci(0x1f,0x3)`|`layout-id`|`10000000`|Layout for AppleALC.|
+|PciRoot(0x0)/Pci(0x2,0x0)|AAPL,GfxYTile|01000000|Fix glitches.|
+||AAPL,ig-platform-id|01005C8A|Recommended value.|
+||device-id|5C8A0010|Recommended value.|
+||enable-backlight-registers-fix|1|Fix backlight registers on KBL, CFL and ICL platforms.|
+||enable-backlight-smoother|1|Make brightness transitions smoother.|
+||enable-cdclk-frequency-fix|1|Support all valid Core Display Clock (CDCLK) frequencies on ICL platforms.|
+||enable-dbuf-early-optimizer|1|Fix the Display Data Buffer (DBUF) issues on ICL+ platforms.|
+||enable-dvmt-calc-fix|1|Fix the kernel panic caused by an incorrectly calculated amount of DVMT pre-allocated memory on Intel ICL platforms.|
+||framebuffer-patch-enable|1|In some cases where you cannot set the DVMT-prealloc of these cards to 256MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties.|
+||framebuffer-fbmem|00009000|Same as above.|
+||framebuffer-stolenmem|00003001|Same as above.|
+|PciRoot(0x0)/Pci(0x1f,0x3)|layout-id|10000000|Layout for AppleALC.|
 
 </details>
 
@@ -134,14 +134,14 @@
 
 |Name|Notes|
 |---|---|
-|`Lilu`<br>`WhateverGreen`<br>`VirtualSMC`<br>`SMCBatteryManager`<br>`SMCProcessor`<br>`SMCSuperIO`|Essentials|
-|`AppleALC`|Audio|
-|`ECEnabler`|Battery reading|
-|`NVMeFix`|Improve compatibility with NVMe SSD.|
-|`USBToolBox`<br>`UTBMap.`|USB mapping|
-|`VoodooI2C`<br>`VoodooI2CHID`|Touchpad|
-|`AirportItlwm`|Wifi|
-|`IntelBluetoothFirmware`<br>`IntelBTPatcher`<br>`BlueToolFixup`|Bluetooth|
+|Lilu<br>WhateverGreen<br>VirtualSMC<br>SMCBatteryManager<br>SMCProcessor<br>SMCSuperIO|Essentials|
+|AppleALC|Audio|
+|ECEnabler|Battery reading|
+|NVMeFix|Improve compatibility with NVMe SSD.|
+|USBToolBox<br>UTBMap.|USB mapping|
+|VoodooI2C<br>VoodooI2CHID|Touchpad|
+|AirportItlwm|Wifi|
+|IntelBluetoothFirmware<br>IntelBTPatcher<br>BlueToolFixup|Bluetooth|
 
 </details>
 
