@@ -60,7 +60,7 @@
 
 </details> 
 
-## Cofiguration
+## Configuration
 
 <details>  
 <summary>BIOS</summary>
@@ -138,7 +138,7 @@
 |AppleALC|Audio|
 |ECEnabler|Battery reading|
 |NVMeFix|Improve compatibility with NVMe SSD.|
-|USBToolBox<br>UTBMap.|USB mapping|
+|USBToolBox<br>UTBMap|USB mapping|
 |VoodooI2C<br>VoodooI2CHID|Touchpad|
 |AirportItlwm|Wifi|
 |IntelBluetoothFirmware<br>IntelBTPatcher<br>BlueToolFixup|Bluetooth|
