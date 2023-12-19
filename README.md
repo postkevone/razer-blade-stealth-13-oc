@@ -108,6 +108,7 @@
 ||framebuffer-patch-enable|1|In some cases where you cannot set the DVMT-prealloc of these cards to 256MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties.|
 ||framebuffer-fbmem|00009000|Same as above.|
 ||framebuffer-stolenmem|00003001|Same as above.|
+||igfxfw|2|Force loading of Apple GuC firmware.<br>Fixes panic on some sites such as Google Maps.|
 |PciRoot(0x0)/Pci(0x1f,0x3)|layout-id|10000000|Layout for AppleALC.|
 
 </details>
