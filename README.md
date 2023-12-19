@@ -15,7 +15,7 @@
 
 ## What does not work
 
-- <a href="https://openintelwireless.github.io/itlwm/FAQ.html#limitation-of-airportitlwm-kext" target="_blank">Limitation of AirportItlwm.kext</a>
+- [Limitation of AirportItlwm.kext](https://openintelwireless.github.io/itlwm/FAQ.html#limitation-of-airportitlwm-kext)
 - Discrete GPU (disabled)
 - Internal microphone
 - Sleep.
@@ -111,9 +111,9 @@
 
 </details>
 
-<a href="https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/ACPI" target="_blank">ACPI Patches</a>
+[ACPI Patches](https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/ACPI)
 
-<a href="https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/Kexts" target="_blank">Kexts</a>
+[Kexts](https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/Kexts)
 
 ## Boot args
 
