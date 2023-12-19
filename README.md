@@ -112,6 +112,7 @@
 </details>
 
 <a href="https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/ACPI" target="_blank">ACPI Patches</a>
+
 <a href="https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/Kexts" target="_blank">Kexts</a>
 
 ## Boot args
