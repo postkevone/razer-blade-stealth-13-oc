@@ -1,4 +1,4 @@
-## BIOS settings
+## BIOS
 
 |Firmware|Version|
 |---|---|
@@ -60,7 +60,7 @@ The BIOS chip [WINBOND W25Q128JV](https://www.digchip.com/datasheets/parts/datas
 
 ATTENTION: The point 1 of the chip is located on the opposite side of the blue dot.
 
-<img src="bios_chip.png" height="350px">
+<img src="bios_chip.png" height="300px">
 
 ### Changes from the original BIOS file
 
