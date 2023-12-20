@@ -40,20 +40,20 @@
 |0000518A|6|Black screen after sleep.|
 |00005C8A|6|Black screen after sleep.|
 |00005D8A|6|Black screen after sleep.|
-|0000528A|6|Black screen after sleep (Dortania).|
+|0000528A|6|Black screen after sleep.<br>(Dortania)|
 |0000538A|6|Black screen after sleep.|
 |00005A8A|6|Black screen after sleep.|
 |00005B8A|6|Black screen after sleep.|
 |0100718A|5|Sleep working (need to open lid twice).|
 |0100A780|5|Boot error.|
 |0100518A|3|Sleep working (need to open lid twice).|
-|01005C8A|3|Sleep working (need to open lid twice).<br>(Recommended)|
+|01005C8A|3|Sleep working (need to open lid twice).<br>(Recommended for unmodded BIOS)|
 |01005D8A|3|Sleep working (need to open lid twice).|
 |0100528A|5|Black screen after boot.|
 |0100538A|5|Black screen after boot.|
 |01005A8A|5|Black screen after boot.|
 |01005B8A|5|Black screen after boot.|
-|0200518A|3|Cursor glitch, panic after sleep.|
+|0200518A|3|Cursor glitch, panic after sleep.<br>(Default value for MacBookAir9,1)<br>(Recommended for modded BIOS)|
 |02005C8A|3|Cursor glitch, sleep working (need to open lid twice).|
 |0200528A|5|Black screen after boot,|
 |0200538A|5|Black screen after boot.|
@@ -62,42 +62,20 @@
 
 ## Configuration
 
-<details>  
-<summary>BIOS</summary>
-<br>
+[BIOS](https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/BIOS)
 
-|Firmware|Version|
-|---|---|
-|System BIOS|1.04|
-|EC FW|1.01|
-|MCU FW|1.00.00.00|
+[ACPI Patches](https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/ACPI)
 
-- `Advanced`
-    - `Thunderbolt(TM) Configuration`
-        - `Security Level`: No Security
-- `Chipset`
-    - `SATA And RST Configuration`
-        - `SATA Mode Selection`: AHCI
-- `Security`
-    - `Secure Boot`
-        - `Secure Boot`: Disabled
-- `Boot`
-    - `Fast Boot`: Disabled
-- `Boot`
-    - `CSM Configuration`
-        - `CSM Support`: Disabled
-
-</details>
+[Kexts](https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/Kexts)
 
 <details>  
-<summary>Device Properties</summary>
+<summary>Device Properties (unmodded BIOS)</summary>
 <br>
 
 |Path|Setting|Value|Notes|
 |---|---|---|---|
-|PciRoot(0x0)/Pci(0x2,0x0)|AAPL,GfxYTile|01000000|Fix glitches.|
-||AAPL,ig-platform-id|01005C8A|Recommended value.|
-||device-id|5C8A0010|Recommended value.|
+|PciRoot(0x0)/Pci(0x2,0x0)|AAPL,GfxYTile|01000000|Fix glitches caused by an incorrect DVMT pre-allocated memory.|
+||AAPL,ig-platform-id|01005C8A|Recommended value for unmodded BIOS.|
 ||enable-backlight-registers-fix|1|Fix backlight registers on KBL, CFL and ICL platforms.|
 ||enable-backlight-smoother|1|Make brightness transitions smoother.|
 ||enable-cdclk-frequency-fix|1|Support all valid Core Display Clock (CDCLK) frequencies on ICL platforms.|
@@ -106,14 +84,28 @@
 ||framebuffer-patch-enable|1|In some cases where you cannot set the DVMT-prealloc of these cards to 256MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties.|
 ||framebuffer-fbmem|00009000|Same as above.|
 ||framebuffer-stolenmem|00003001|Same as above.|
-||igfxfw|2|Force loading of Apple GuC firmware.<br>Fixes panic on some sites such as Google Maps.|
+||igfxfw|2|Force loading of Apple GuC firmware.<br>Fixes panics on some sites such as Google Maps.|
+||rps-control|1|Enable RPS control patch (improves IGPU performance).|
 |PciRoot(0x0)/Pci(0x1f,0x3)|layout-id|10000000|Layout for AppleALC.|
 
 </details>
 
-[ACPI Patches](https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/ACPI)
+<details>  
+<summary>Device Properties (modded BIOS)</summary>
+<br>
 
-[Kexts](https://github.com/postkevone/razer-blade-stealth-13-oc/tree/main/Kexts)
+|Path|Setting|Value|Notes|
+|---|---|---|---|
+||AAPL,ig-platform-id|0200518A|Recommended value for modded BIOS.|
+||enable-backlight-registers-fix|1|Fix backlight registers on KBL, CFL and ICL platforms.|
+||enable-backlight-smoother|1|Make brightness transitions smoother.|
+||enable-cdclk-frequency-fix|1|Support all valid Core Display Clock (CDCLK) frequencies on ICL platforms.|
+||enable-dbuf-early-optimizer|1|Fix the Display Data Buffer (DBUF) issues on ICL+ platforms.|
+||igfxfw|2|Force loading of Apple GuC firmware.<br>Fixes panics on some sites such as Google Maps.|
+||rps-control|1|Enable RPS control patch (improves IGPU performance).|
+|PciRoot(0x0)/Pci(0x1f,0x3)|layout-id|10000000|Layout for AppleALC.|
+
+</details>
 
 ## Boot args
 
@@ -122,6 +114,11 @@
 ## SMBIOS
 
 `MacBookAir9,1`: Has the nearest CPU clock frequencies to the Razer Blade 13 RZ09-03102.
+
+```
+RZ09-03102: 1.3 GHz / 3.9 GHz (Base/Turbo)
+MacBookAir9,1: 1.2GHZ / 3.8 GHz (Base/Turbo)
+```
 
 ## Credits
 
