@@ -18,8 +18,9 @@
 - [Limitation of AirportItlwm.kext](https://openintelwireless.github.io/itlwm/FAQ.html#limitation-of-airportitlwm-kext)
 - Discrete GPU (disabled)
 - Internal microphone
-- Sleep.
-    - Sleep works but the dGPU is turned on after sleep. Disable sleep completely for longer battery life: `sudo pmset disablesleep 1`.
+- Sleep (works only if you disable dGPU from a modded BIOS by setting `Primary Display` to `IGTX`).
+    - Sleep works even with the stock BIOS. However, the dGPU turns on by itself after sleep, resulting in high battery consumption.
+    - Disable sleep completely for longer battery life on stock BIOS: `sudo pmset disablesleep 1`.
 
 ## Not tested
 
@@ -96,7 +97,7 @@
 
 |Path|Setting|Value|Notes|
 |---|---|---|---|
-||AAPL,ig-platform-id|0200518A|Recommended value for modded BIOS.|
+|PciRoot(0x0)/Pci(0x2,0x0)|AAPL,ig-platform-id|0200518A|Recommended value for modded BIOS.|
 ||enable-backlight-registers-fix|1|Fix backlight registers on KBL, CFL and ICL platforms.|
 ||enable-backlight-smoother|1|Make brightness transitions smoother.|
 ||enable-cdclk-frequency-fix|1|Support all valid Core Display Clock (CDCLK) frequencies on ICL platforms.|

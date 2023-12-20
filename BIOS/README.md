@@ -52,13 +52,13 @@ The BIOS has been modded by using:
 - [Aptio V UEFI Editor](https://github.com/BoringBoredom/UEFI-Editor)
 - [AsProgrammer](https://github.com/nofeletru/UsbAsp-flash)
 
-### Chip's location
+### Chip location
 
 The BIOS chip [WINBOND W25Q128JV](https://www.digchip.com/datasheets/parts/datasheet/2/523/W25Q128JV.php) is located just above the dGPU:
 
 <img src="laptop_back.png" height="300px">
 
-ATTENTION: The point 1 of the chip is located on the other side of the blue dot.
+ATTENTION: The point 1 of the chip is located on the opposite side of the blue dot.
 
 <img src="bios_chip.png" height="350px">
 
@@ -71,4 +71,16 @@ Unsuppressed 0x28762
 Unsuppressed 0x29AB3
 Unsuppressed 0x32D05
 Unsuppressed 0x33FB1
+```
+
+## Notes
+
+If you have an unlocked BIOS, you can disable the following options in the `config.plist` file:
+
+```
+Kernel>Quirks
+	AppleXcpmCfgLock: NO (CFG-Lock)
+	DisableIoMapper: NO (VT-d)
+UEFI>Quirks
+	ReleaseUsbOwnership: NO (EHCI/XHCI Handoff)
 ```
