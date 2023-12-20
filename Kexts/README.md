@@ -2,7 +2,7 @@
 
 |Name|Notes|
 |---|---|
-|Lilu<br>WhateverGreen<br>VirtualSMC<br>SMCBatteryManager<br>SMCProcessor<br>SMCSuperIO|Essentials|
+|Lilu<br>VirtualSMC<br>WhateverGreen<br>SMCBatteryManager<br>SMCProcessor<br>SMCSuperIO|Essentials|
 |AppleALC|Audio|
 |ECEnabler|Battery reading|
 |NVMeFix|Improve compatibility with NVMe SSD.|
