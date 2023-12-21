@@ -56,14 +56,14 @@ ATTENTION: The point 1 of the chip is located on the opposite side of the blue d
 
 ### Changes from the original BIOS file
 
-
+```
 ========== Section_PE32_image_Setup_Setup.sct ==========
 
 Unsuppressed 0x28762
 Unsuppressed 0x29AB3
 Unsuppressed 0x32D05
 Unsuppressed 0x33FB1
-
+```
 
 ## Notes
 
