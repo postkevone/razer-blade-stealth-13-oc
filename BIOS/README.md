@@ -48,11 +48,11 @@ The BIOS has been modded by using:
 
 The BIOS chip [WINBOND W25Q128JV](https://www.digchip.com/datasheets/parts/datasheet/2/523/W25Q128JV.php) is located just above the dGPU:
 
-<img src="laptop_back.png" style="max-height: 300px">
+<img src="laptop_back.png">
 
 ATTENTION: The point 1 of the chip is located on the opposite side of the blue dot.
 
-<img src="bios_chip.png" style="max-height: 300px">
+<img src="bios_chip.png">
 
 ### Changes from the original BIOS file
 
