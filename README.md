@@ -98,7 +98,7 @@
 |Path|Setting|Value|Notes|
 |---|---|---|---|
 |PciRoot(0x0)/Pci(0x2,0x0)|AAPL,GfxYTile|01000000|Fix glitches caused by an incorrect DVMT pre-allocated memory.|
-|PciRoot(0x0)/Pci(0x2,0x0)|AAPL,ig-platform-id|0100718A|Recommended value for modded BIOS.|
+||AAPL,ig-platform-id|0100718A|Recommended value for modded BIOS.|
 ||enable-backlight-registers-fix|1|Fix backlight registers on KBL, CFL and ICL platforms.|
 ||enable-backlight-smoother|1|Make brightness transitions smoother.|
 ||enable-cdclk-frequency-fix|1|Support all valid Core Display Clock (CDCLK) frequencies on ICL platforms.|
