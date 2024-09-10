@@ -45,7 +45,7 @@
 |0000538A|6|Black screen after sleep.|
 |00005A8A|6|Black screen after sleep.|
 |00005B8A|6|Black screen after sleep.|
-|0100718A|5|Sleep working (need to open lid twice).|
+|0100718A|5|Sleep working (need to open lid twice).<br>(Recommended for modded BIOS)|
 |0100A780|5|Boot error.|
 |0100518A|3|Sleep working (need to open lid twice).|
 |01005C8A|3|Sleep working (need to open lid twice).<br>(Recommended for unmodded BIOS)|
@@ -54,7 +54,7 @@
 |0100538A|5|Black screen after boot.|
 |01005A8A|5|Black screen after boot.|
 |01005B8A|5|Black screen after boot.|
-|0200518A|3|Cursor glitch, panic after sleep.<br>(Default value for MacBookAir9,1)<br>(Recommended for modded BIOS)|
+|0200518A|3|Cursor glitch, panic after sleep.<br>(Default value for MacBookAir9,1)|
 |02005C8A|3|Cursor glitch, sleep working (need to open lid twice).|
 |0200528A|5|Black screen after boot,|
 |0200538A|5|Black screen after boot.|
